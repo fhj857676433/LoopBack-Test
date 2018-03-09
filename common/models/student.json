@@ -1,0 +1,53 @@
+{
+  "name": "Student",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "student_id": {
+      "type": "number",
+      "required": true
+    },
+    "student_name": {
+      "type": "string",
+      "required": true
+    },
+    "student_sex": {
+      "type": "number",
+      "default": 0
+    },
+    "student_subject": {
+      "type": [
+        "string"
+      ]
+    },
+    "student_class": {
+      "type": "number"
+    },
+    "student_teachers": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "stu_class": {
+      "type": "belongsTo",
+      "model": "Class",
+      "foreignKey": ""
+    },
+    "stu_subject": {
+      "type": "belongsTo",
+      "model": "subject",
+      "foreignKey": ""
+    },
+    "stu_teacher": {
+      "type": "belongsTo",
+      "model": "Teacher",
+      "foreignKey": "teacher_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

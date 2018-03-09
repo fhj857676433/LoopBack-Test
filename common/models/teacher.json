@@ -1,0 +1,31 @@
+{
+  "name": "Teacher",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "teacher_id": {
+      "type": "number",
+      "required": true
+    },
+    "teacher_name": {
+      "type": "string",
+      "required": true
+    },
+    "teacher_sex": {
+      "type": "number",
+      "default": 0
+    },
+    "teacher_class": {
+      "type": [
+        "number"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
